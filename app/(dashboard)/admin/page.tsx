@@ -99,9 +99,10 @@ const page = () => {
       </div>
       {/* card challenge */}
       <div className="flex h-[100%] p-2 bg-blue-500 overflow-hidden">
+        {/* PETS DIV */}
         <PetCard />
       </div>
-      <div className="flex h-[100%] bg-orange-500">c</div>
+      <div className="flex h-[100%] bg-orange-500"></div>
     </div>
   );
 };
