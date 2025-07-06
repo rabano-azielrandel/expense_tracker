@@ -8,6 +8,7 @@ import {
   FaShoppingCart,
 } from "react-icons/fa";
 import ExpenseTable from "../_components/ExpenseTable";
+import RecentTransactions from "../_components/RecentTransactionTable";
 import PetCard from "../_components/PetCard";
 import React from "react";
 
@@ -44,11 +45,57 @@ const expenseData = [
   },
 ];
 
+const transactionsData = [
+  {
+    id: 1,
+    category: "Food & Dining",
+    name: "Cookies and Milk from Supermarket",
+    status: "Completed",
+    amount: 120.5,
+  },
+  {
+    id: 2,
+    category: "Transportation",
+    name: "Bus Ticket to Downtown",
+    status: "Pending",
+    amount: 45.0,
+  },
+  {
+    id: 3,
+    category: "Hygiene",
+    name: "Hand Soap and Toothpaste",
+    status: "Completed",
+    amount: 85.75,
+  },
+  {
+    id: 4,
+    category: "Entertainment",
+    name: "Online Movie Rental",
+    status: "Failed",
+    amount: 1500.0,
+  },
+  {
+    id: 5,
+    category: "Utilities",
+    name: "Monthly Water Bill",
+    status: "Completed",
+    amount: 310.25,
+  },
+  {
+    id: 6,
+    category: "Groceries",
+    name: "Vegetables, Fruits, and Snacks",
+    status: "Completed",
+    amount: 642.9,
+  },
+];
+
 const page = () => {
   return (
-    <div className="flex flex-col h-[100%] gap-2 bg-red-500">
-      <div className="flex h-[100%] bg-green-500">
+    <div className="flex flex-col h-[100%] gap-2">
+      <div className="flex justify-between h-[100%]">
         <ExpenseTable data={expenseData} />
+        <RecentTransactions data={transactionsData} />
       </div>
       {/* card challenge */}
       <div className="flex h-[100%] p-2 bg-blue-500 overflow-hidden">
