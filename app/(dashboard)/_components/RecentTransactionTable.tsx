@@ -16,9 +16,9 @@ export default function RecentTransactionTable({
   data,
 }: RecentTransactionProps) {
   return (
-    <div className="w-[50%] bg-gray-800 border border-gray-700 rounded-lg shadow-md p-4">
+    <div className="w-[60%] bg-[#1B1B1B] border border-[#f1ecec11] rounded-lg shadow-md p-4">
       {/* Title */}
-      <h1 className="text-xl font-bold mb-4 border-b border-gray-600 pb-2 text-white">
+      <h1 className="text-xl font-bold mb-4 border-b border-[#f1ecec11] pb-2 text-white">
         Recent Transactions
       </h1>
 
@@ -28,7 +28,7 @@ export default function RecentTransactionTable({
         {data.map((item) => (
           <div
             key={item.id}
-            className="flex items-center justify-between border-b border-gray-700 last:border-b-0 pb-2"
+            className="flex items-center justify-between border-b border-[#f1ecec11] last:border-b-0 pb-2"
           >
             <div className="w-1/4 truncate text-white font-light">
               {item.category}
