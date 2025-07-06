@@ -93,7 +93,7 @@ const transactionsData = [
 const page = () => {
   return (
     <div className="flex flex-col h-[100%] gap-2">
-      <div className="flex justify-between h-[100%]">
+      <div className="h-[100%] flex gap-2">
         <ExpenseTable data={expenseData} />
         <RecentTransactions data={transactionsData} />
       </div>
