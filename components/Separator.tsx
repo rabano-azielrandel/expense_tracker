@@ -5,7 +5,7 @@ type props = {
 };
 
 const Separator: React.FC<props> = ({ className }) => {
-  return <div className={`${className} w-full h-[1px] bg-black p-[1px]`}></div>;
+  return <div className={`${className} w-full h-[1px] bg-black`}></div>;
 };
 
 export default Separator;

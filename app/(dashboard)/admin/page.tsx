@@ -92,18 +92,21 @@ const transactionsData = [
 
 const page = () => {
   return (
-    <div className="flex flex-col h-[100%] gap-2">
-      <div className="h-[100%] flex gap-2">
-        <ExpenseTable data={expenseData} />
-        <RecentTransactions data={transactionsData} />
+    <main className="w-full py-10 rounded-lg">
+      <div className="flex flex-col h-[100%] gap-8 bg-[#0B0B0B] px-10 py-10 rounded-lg">
+        <div className="flex justify-between gap-8 h-[100%]">
+          <ExpenseTable data={expenseData} />
+          <RecentTransactions data={transactionsData} />
+        </div>
+        {/* card challenge */}
+        <div className="flex h-[100%] p-2 bg-[#1B1B1B] border border-[#f1ecec11] overflow-hidden rounded-lg">
+          <PetCard />
+        </div>
+        <div className="flex h-[100%] bg-[#1B1B1B] border-2 border-[#f1ecec11] rounded-lg">
+          c
+        </div>
       </div>
-      {/* card challenge */}
-      <div className="flex h-[100%] p-2 bg-blue-500 overflow-hidden">
-        {/* PETS DIV */}
-        <PetCard />
-      </div>
-      <div className="flex h-[100%] bg-orange-500"></div>
-    </div>
+    </main>
   );
 };
 

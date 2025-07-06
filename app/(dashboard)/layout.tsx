@@ -10,45 +10,62 @@ export const metadata: Metadata = {
 };
 
 const navLinks = [
-  { text: "Home", href: "/Dashboard", icon: <FaHome /> },
-  { text: "Expenses", href: "/Expense", icon: <FaMoneyBillWave /> },
-  { text: "Approvals ", href: "/Approvals", icon: <FaCheckCircle /> },
-  { text: "Settings", href: "/Settings", icon: <FaCog /> },
+  { text: "Home", href: "/Dashboard", icon: <FaHome color="#f1ecec" /> },
+  {
+    text: "Expenses",
+    href: "/Expense",
+    icon: <FaMoneyBillWave color="#f1ecec" />,
+  },
+  {
+    text: "Approvals ",
+    href: "/Approvals",
+    icon: <FaCheckCircle color="#f1ecec" />,
+  },
+  { text: "Settings", href: "/Settings", icon: <FaCog color="#f1ecec" /> },
 ];
 
 export default function DashboardLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <div className="flex w-full h-screen text-gray-700">
-      <aside className="w-[20%] p-2 border bg-white">
+    <div className="flex w-full h-screen text-gray-700 bg-[#1B1B1B]">
+      <aside className="py-8 px-4  min-w-[240px] max-w-[240px]">
         {/* profile section */}
-        <div className="flex flex-col justify-center items-center gap=4">
-          <div className="rounded-full p-1 bg-green">
+
+        <div className="flex flex-col justify-center items-center gap-4 ">
+          <div className="w-[100px] h-[100px] max-w-[70px] max-h-[70px] overflow-hidden rounded-full bg-white">
             <Image
               src={"/images/profile.png"}
               alt="adsf"
               width={100}
               height={100}
-              className="object-contain w-[100px] h-[100px]"
+              className="object-cover w-full h-full"
             />
           </div>
-          <span className="font-bold text-md">Aziel Randel Rabano</span>
+
+          <span className="font-bold text-sm text-center text-[#f1ecec]">
+            Aziel Randel Rabano
+          </span>
         </div>
 
         {/* separator */}
-        <Separator className="max-w-[90%] mx-auto mt-2 bg-gray-400" />
+        <Separator className="max-w-[100%] mx-auto mt-4 bg-gray-600 h-[1px]" />
 
         {/* navs */}
-        <nav className="flex flex-col justify-between items-start gap-8 px-24 mt-8">
+
+        <nav className="flex flex-col justify-between items-start gap-0 mt-4">
           {navLinks.map((nav, index) => (
             <Link
               href={nav.href}
               key={index}
-              className="flex items-center gap-8"
+              className={`${
+                index === 0 && "bg-[#28282A] border border-[#f1ecec11]"
+              } flex items-center gap-4 py-4 rounded-lg w-full px-3`}
             >
-              <span className="text-2xl">{nav.icon}</span>
-              <span className="text-md font-medium">{nav.text}</span>
+              <span className="text-xl ">{nav.icon}</span>
+              <span className="text-md font-medium text-[#f1ecec]">
+                {nav.text}
+              </span>
             </Link>
           ))}
         </nav>
@@ -56,7 +73,8 @@ export default function DashboardLayout({
         {/* logo */}
         <div></div>
       </aside>
-      <div className="w-[80%] p-8 bg-white"> {children} </div>
+
+      {children}
     </div>
   );
 }
