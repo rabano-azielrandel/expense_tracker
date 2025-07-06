@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const pet_card = () => {
+export default function PetCard() {
   const [isHovered, SetIsHover] = useState(false);
 
   return (
@@ -34,6 +34,4 @@ const pet_card = () => {
       </p>
     </div>
   );
-};
-
-export default pet_card;
+}
