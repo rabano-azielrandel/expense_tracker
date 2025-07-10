@@ -33,7 +33,7 @@ export default function RecentTransactionTable({
             <div className="w-1/4 truncate text-white font-light">
               {item.category}
             </div>
-            <div className="w-3/5 truncate text-white font-light">
+            <div className="w-2/5 truncate text-white font-light">
               {item.name}
             </div>
             <div className="w-1/5 flex items-center justify-center">

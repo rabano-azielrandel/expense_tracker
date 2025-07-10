@@ -1,17 +1,22 @@
 import React, { useState } from "react";
 
-export default function PetCard() {
+type PetCardProps = {
+  avatar: string;
+};
+
+export default function PetCard({ avatar }: PetCardProps) {
   const [isHovered, SetIsHover] = useState(false);
 
   return (
     <div
       onMouseEnter={() => SetIsHover(!isHovered)}
       onMouseLeave={() => SetIsHover(!isHovered)}
-      className="flex flex-col aspect-square rounded-xl bg-[url('/images/cat.png')] bg-cover bg-center relative overflow-hidden group"
+      style={{ backgroundImage: `url(${avatar})` }}
+      className={`flex flex-col aspect-square rounded-xl bg-cover bg-center relative overflow-hidden group`}
     >
       <img
         src="/images/lower_bg.jpg"
-        alt="upper_bg"
+        alt="{upper_bg}"
         className="h-[110%] w-[100%] scale-[120%] absolute bottom-0 -translate-x-100 translate-y-100 
             group-hover:translate-x-0 group-hover:-translate-y-0 transition-all duration-500 ease-in-out"
       />

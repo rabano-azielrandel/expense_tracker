@@ -92,15 +92,22 @@ const transactionsData = [
 
 const page = () => {
   return (
-    <main className="w-full py-10 rounded-lg">
+    <main className="w-screen overflow-hidden py-10 rounded-lg">
       <div className="flex flex-col h-[100%] gap-8 bg-[#0B0B0B] px-10 py-10 rounded-lg">
         <div className="flex justify-between gap-8 h-[100%]">
           <ExpenseTable data={expenseData} />
           <RecentTransactions data={transactionsData} />
         </div>
         {/* card challenge */}
-        <div className="flex h-[100%] p-2 bg-[#1B1B1B] border border-[#f1ecec11] overflow-hidden rounded-lg">
-          <PetCard />
+        <div className="flex h-[100%] p-2 gap-8 bg-[#1B1B1B] border border-[#f1ecec11] overflow-hidden rounded-lg">
+          <PetCard avatar="/images/cat.jpg" />
+          <PetCard avatar="/images/owl.jpg" />
+          <PetCard avatar="/images/kraken.jpg" />
+          <PetCard avatar="/images/wolf.jpg" />
+          <PetCard avatar="/images/snake.jpg" />
+          <PetCard avatar="/images/crow.jpg" />
+          <PetCard avatar="/images/polarbear.jpg" />
+          <PetCard avatar="/images/horse.jpg" />
         </div>
         <div className="flex h-[100%] bg-[#1B1B1B] border-2 border-[#f1ecec11] rounded-lg">
           c
